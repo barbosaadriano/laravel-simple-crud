@@ -14,8 +14,3 @@
     <button type="submit">Enviar</button>
 </form>
 @endsection
-@section('custom-style')
-   body {
-       background-color: #00FF00;
-   }
-@endsection

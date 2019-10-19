@@ -27,6 +27,11 @@ Route::middleware(['tads'])->group(function(){
     Route::delete('/tads',function(){
         return view('tads',['msg'=>'test delete']);
     });
+
+    Route::resource('estados','EstadoController')->except(['show']);
+    
+    Route::get('/estados/{estado}/confirm','EstadoController@confirm')
+        ->name('estados.confirm');
 });
 
 

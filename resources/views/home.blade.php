@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Painel de Controle</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <div class="col-md-3">
+                    <a href="{{route('estados.index')}}"><div class="alert alert-info">
+                        Estados
+                    </div></a>
+                    </div>
+                    <div class="col-md-3">
+                    <a href="{{route('tads.get')}}"><div class="alert alert-warning">
+                        TADS
+                    </div></a>
+                    </div>
 
-                    You are logged in!
                 </div>
             </div>
         </div>
