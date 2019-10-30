@@ -17,6 +17,9 @@
                     <a href="{{route('estados.index')}}"><div class="alert alert-info">
                         Estados
                     </div></a>
+                    <a href="{{route('cidades.index')}}"><div class="alert alert-danger">
+                        Cidade
+                    </div></a>
                     </div>
                     <div class="col-md-3">
                     <a href="{{route('tads.get')}}"><div class="alert alert-warning">

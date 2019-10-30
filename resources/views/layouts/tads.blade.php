@@ -31,6 +31,7 @@
         {{ config('app.name', 'Tads') }}
         <div class="menu-itens">
             <a href="/home"><i class="fas fa-home"></i></a>
+            <a href="/home"><i class="fab text-info fa-facebook-f"></i></a>
             @yield('menu')
         </div>
     </div>

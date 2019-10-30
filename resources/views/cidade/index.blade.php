@@ -1,10 +1,10 @@
 @extends('layouts.tads')
 @section('title')
-    Lista de estados
+    Lista de cidades
 @endsection
 @section('menu')
- Estados
- <a href="{{route('estados.create')}}" class="btn btn-success btn-lg"><i class="fas fa-plus"></i> adicionar</a>
+ Cidades
+ <a href="{{route('cidades.create')}}" class="btn btn-success btn-lg"><i class="fas fa-plus"></i> adicionar</a>
 @endsection
 @section('conteudo')
 <div class="row">
@@ -18,7 +18,7 @@
     @method('get')
     <div class="input-group mb-3">
         <input type="text" class="form-control" 
-            placeholder="procure aqui pelo nome do estado" name="pesquisa">
+            placeholder="procure aqui pelo nome da cidade" name="pesquisa">
         <div class="input-group-append">
             <button class="btn btn-outline-info" type="submit">
                 pesquisar
@@ -27,15 +27,14 @@
     </div>    
 </form>
 <hr>
- @if(isset($estados))
+ @if(isset($cidades))
  <div class="row">
     <div class="col-md-12">
-        @foreach($estados as $est)
-        <a  href="{{route('estados.edit',['estado'=>$est->id])}}">
+        @foreach($cidades as $cid)
+        <a  href="{{route('cidades.edit',['cidade'=>$cid->id])}}">
             <div class="estado">             
-                <h2>{{$est->nome}}</h2>
-                {{$est->cidades()->count()}} cidade(s) cadastradas
-                <a  href="{{route('estados.confirm',['estado'=>$est->id])}}" 
+                <h2>{{$cid->nome}}</h2>
+                <a  href="{{route('cidades.confirm',['cidade'=>$cid->id])}}" 
                 class="btn btn-danger btn-sm right"><i class="fas fa-trash"></i></a>
             </div>
             </a>            
@@ -45,7 +44,7 @@
     <br/>
     <div class="row">
         <div class="col-md-12">
-            {{$estados->links()}}
+            {{$cidades->links()}}
         </div>
     </div>
  @endif
